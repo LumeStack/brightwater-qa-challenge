@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoices | Brightwater Billing Portal</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="invoices">
+<div class="bw-layout">
+  <aside class="bw-sidebar"><div class="bw-brand">Brightwater</div><nav class="bw-nav" aria-label="Main"></nav></aside>
+  <main class="bw-content">
+    <h1>Invoices</h1>
+    <div class="bw-card bw-row">
+      <label class="bw-field">Status
+        <select name="status">
+          <option value="">All</option>
+          <option value="open">Open</option>
+          <option value="overdue">Overdue</option>
+          <option value="paid">Paid</option>
+        </select>
+      </label>
+    </div>
+    <div class="bw-skeleton" aria-busy="true">Loading invoices</div>
+    <table class="bw-table" data-testid="invoice-table" hidden>
+      <thead><tr><th>Invoice</th><th>Customer</th><th>Amount</th><th>Status</th><th>Due date</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </main>
+</div>
+<div class="bw-cookie" role="dialog" aria-label="Cookie consent" hidden>
+  <span>We use cookies to keep you signed in and to improve the portal.</span>
+  <button class="bw-btn" type="button">Accept cookies</button>
+</div>
+<script src="/assets/app.js"></script>
+</body>
+</html>

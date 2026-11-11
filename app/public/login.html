@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in | Brightwater Billing Portal</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="login">
+<main class="bw-card bw-login">
+  <h1>Brightwater Billing Portal</h1>
+  <form class="bw-form" novalidate>
+    <label class="bw-field" for="email">Email</label>
+    <div class="bw-field"><input id="email" name="email" type="email" autocomplete="username"></div>
+    <label class="bw-field" for="password">Password</label>
+    <div class="bw-field"><input id="password" name="password" type="password" autocomplete="current-password"></div>
+    <p class="bw-alert" role="alert"></p>
+    <button class="bw-btn bw-btn-primary" type="submit">Sign in</button>
+    <div class="bw-spinner" role="progressbar" aria-label="Signing in" hidden></div>
+  </form>
+</main>
+<div class="bw-cookie" role="dialog" aria-label="Cookie consent" hidden>
+  <span>We use cookies to keep you signed in and to improve the portal.</span>
+  <button class="bw-btn" type="button">Accept cookies</button>
+</div>
+<script src="/assets/app.js"></script>
+</body>
+</html>
