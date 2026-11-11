@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: brightwater-billing-portal
+    runtime: node
+    plan: free
+    buildCommand: node --version
+    startCommand: node app/server.min.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
