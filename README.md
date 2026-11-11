@@ -2,7 +2,13 @@
 
 This is a staging build of the Brightwater Billing Portal. Treat it as a black box: the source code is not provided.
 
-## How to run
+## Staging environment
+
+Base URL: **https://brightwater-billing-portal.onrender.com**
+
+The staging server sleeps when idle. The first request after a pause can take about a minute, and waking up restores the seed data (same as a reset). Open the URL once before you start a test run.
+
+## How to run locally (optional)
 
 No `npm install` is needed. Requires Node.js 20 or Docker.
 
@@ -16,7 +22,7 @@ or
 docker compose up
 ```
 
-Base URL: `http://localhost:3000` (set `PORT` to use another port).
+Local base URL: `http://localhost:3000` (set `PORT` to use another port).
 
 ## Credentials
 
@@ -28,7 +34,7 @@ Base URL: `http://localhost:3000` (set `PORT` to use another port).
 `POST /api/test/reset` restores the seed data. It is idempotent and needs no session.
 
 ```bash
-curl -X POST http://localhost:3000/api/test/reset
+curl -X POST https://brightwater-billing-portal.onrender.com/api/test/reset
 ```
 
 ## Reminder
